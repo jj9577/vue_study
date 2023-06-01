@@ -31,7 +31,7 @@ export default {
   data(){
         return{
           cnt:0,
-          step:3,
+          step:4,
           fileurl:'',
           write:'',
           postData:data,

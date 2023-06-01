@@ -22,7 +22,6 @@ export default {
             let newFllower = ori.value.filter((filter)=>String(filter.name).toLowerCase().includes(String(text).toLowerCase()));
             follower.value=newFllower;
         }
-
         onMounted(()=>{
             axios.get('/follower.json').then((a)=>{ 
                 ori.value=[...a.data];

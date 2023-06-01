@@ -25,6 +25,11 @@
         <div v-if="step==3">
             <MyPage :one="1"></MyPage>
         </div>
+
+        <!-- apitest -->
+        <div v-if="step==4">
+            <OpenApi></OpenApi>
+        </div>
     </div>
 </template>
 
@@ -33,6 +38,7 @@ import PostPage from './PostPage.vue'
 import FilterBox from './FilterBox.vue'
 import MyPage from './MyPage.vue'
 import filter from '@/assets/filter'
+import OpenApi from './OpenApiTestPage.vue'
 
 export default {
     name:'ContainerPage',
@@ -51,6 +57,7 @@ export default {
         PostPage:PostPage,
         FilterBox:FilterBox,
         MyPage:MyPage,
+        OpenApi:OpenApi,
     },
     mounted(){
         this.emitter.on('filter', (a)=>{this.filtername = a; });
